@@ -13,10 +13,10 @@ function myFunction() {
   }
   nestedFunction();
 }
-//myFunction();
+myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+// The binding is implied simply because the ~nestedFunction~ & the variable ~internal~ were created within the same scope of ~myFunction~.
 
 
 
@@ -30,11 +30,18 @@ function myFunction() {
 💡 NOTE: you may use a for loop for this function if you wish 
 */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(upTo) {
+  const numbers = [];
+  for (let i = 1; i <= upTo; i++) {
+      numbers.push(i);
   }
- 
+  console.log(numbers);
+  const sumOfAll = numbers.reduce((sum, number) => {
+    return sum + number
+  }, 0);
+  return (sumOfAll);
+}
+console.log('task 2:', summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
