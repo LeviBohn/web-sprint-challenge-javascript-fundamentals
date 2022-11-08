@@ -108,7 +108,7 @@ console.log('Request 2:', lowerCaseNames(zooAnimals));
       return item.population <5
     })
     return smallPops;
-    /*Your Code Here*/
+
   }
   
 
@@ -121,10 +121,13 @@ console.log('Request 2:', lowerCaseNames(zooAnimals));
   💡 NOTE: Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count. Check MDN/W3Schools for syntax!
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(zooAnimals){
+    const total = zooAnimals.reduce((currentTotal, nextPopulation) => {
+      return nextPopulation.population + currentTotal
+    }, 0)
+    return total;
   }
-  
+  console.log('Request 4:', USApop(zooAnimals));
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
