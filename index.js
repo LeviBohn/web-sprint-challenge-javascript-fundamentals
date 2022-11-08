@@ -103,7 +103,11 @@ console.log('Request 2:', lowerCaseNames(zooAnimals));
   3. Return this new array
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
+  function lowPopulationAnimals(zooAnimals){
+    const smallPops = zooAnimals.filter((item) => {
+      return item.population <5
+    })
+    return smallPops;
     /*Your Code Here*/
   }
   
