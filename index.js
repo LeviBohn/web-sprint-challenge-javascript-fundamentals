@@ -87,10 +87,13 @@ console.log('Request 1:', animalNames(zooAnimals));
   💡 NOTE: Do some research for other methods that can help help you
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+    const mappedToLowerCase = array.map((item) => {
+      return item.animal_name.toLowerCase();
+    })
+    return (mappedToLowerCase);
   }
-  
+console.log('Request 2:', lowerCaseNames(zooAnimals));
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
